@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-   padding: 0 13.6rem;
+   padding: 0 13rem;
 
    display: flex;
    flex-direction: column;
@@ -22,6 +22,8 @@ export const Form = styled.form`
 
    > p{
       font-size: 1.4rem;
+      text-align: center;
+      color: ${({theme})=> theme.COLORS.GRAY_100};
    }
 
    > h2{

@@ -17,11 +17,15 @@ export const Form = styled.form`
 
    > h1{
       font-size: 3rem;
+      margin-bottom: .4rem;
+      margin-top: 6rem;
       color: ${({theme})=> theme.COLORS.ORANGE};
    }
 
    > p{
-      font-size: 1.4rem;
+      font-size: 1.3rem;
+      text-align: center;
+      color: ${({theme})=> theme.COLORS.GRAY_100};
    }
 
    > h2{
