@@ -41,6 +41,7 @@ export const Avatar = styled.div`
       border-radius: 50%;
       width: 18.6rem;
       height: 18.6rem;
+      border: 2px solid ${({ theme }) => theme.COLORS.ORANGE};
    }
 
    >label{

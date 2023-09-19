@@ -14,7 +14,9 @@ export function Home(){
    return(
       <Container>
          <Brand>
-            <h1>Rocketnotes</h1>
+         <h1>
+          Central<span>.</span>Filme
+        </h1>
          </Brand>
 
          <Header/>
@@ -24,10 +26,7 @@ export function Home(){
                <ButtonText title="Todos" $isactive/>
             </li>
             <li>
-               <ButtonText title="Frontend"/>
-            </li>
-            <li>
-               <ButtonText title="Node"/>
+               <ButtonText title="Filmes"/>
             </li>
          </Menu>
 
@@ -36,12 +35,12 @@ export function Home(){
          </Search>
 
          <Content>
-            <Section title="Minhas notas">
+            <Section title="Meus filmes">
                <Note data={{
-                  title:'React',
+                  title:'filme',
                    tags: [
-                     {id: '1', name: 'react'},
-                     {id: '2', name: 'react'},
+                     {id: '1', name: 'Barbie'},
+                     {id: '2', name: 'Desenho'},
                      ]      
                    }}/>
             </Section>

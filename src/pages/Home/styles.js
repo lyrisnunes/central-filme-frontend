@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-
 export const Container  = styled.div`
    width: 100%;
    height: 100vh;
@@ -31,6 +30,9 @@ export const Brand = styled.div`
 
    > h1{
       font-size: 2.2rem;
+   }
+
+   h1 > span{
       color: ${({theme})=> theme.COLORS.ORANGE};
    }
 `;
