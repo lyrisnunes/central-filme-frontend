@@ -1,7 +1,7 @@
 # Central Filmes
 
 <h1>
-         <img src="src/assets/perfil.gif" >
+         <img src="src/img//banner.png" >
 </h1>
 
  A Central de Filmes é uma aplicação para organizar e desfrutar dos meus filmes favoritos. Com uma interface que inclui login, cadastro, uma página inicial intuitiva, um perfil personalizado e uma seção de descrição e avaliação de filmes.
