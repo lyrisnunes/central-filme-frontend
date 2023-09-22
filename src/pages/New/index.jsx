@@ -1,38 +1,74 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 
-import { Link } from "react-router-dom";
-
+import {api} from "../../services/api";
 import { Container, Form } from "./styles";
 
 export function New() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState(""); 
+
   const [links, setLinks] = useState([]);
   const [newLink, setNewLink] = useState(""); 
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState(""); 
 
+  const navigate = useNavigate();
+
+  function handleBack(){
+    navigate(-1)
+   }
+
   function handleAddLink() {
-    setLinks((prevState) => [...prevState, newLink]); //estado anterior acessar pelo prevState
-    setNewLink(""); // LIMPAR O CAMPO
+    setLinks((prevState) => [...prevState, newLink]); 
+    setNewLink(""); 
   }
 
-  function handleRemoveLink(deleted){ // retorna todos links menos o link que eu deletar
-    setLinks(prevState => prevState.filter(link => link !== deleted));// armazena no setLinks
+  function handleRemoveLink(deleted){ 
+    setLinks(prevState => prevState.filter(link => link !== deleted));
   }
 
-  function handleAddTag(){// prevstate tudoo que estava antes
+  function handleAddTag(){
     setTags(prevState => [...prevState, newTag]);
     setNewTag("")
   }
 
   function handleDeleteTag(deleted){
     setTags(prevState => prevState.filter(tag => tag !== deleted))
+  }
+
+  async function handleNewNote(){
+
+    if(!title){
+      return alert("Digite o título");
+    }
+    
+    if(newLink){
+      return alert("Você deixou um link no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe campo vazio.");
+    }
+
+    if(newTag){
+      return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe campo vazio.");
+    }
+
+    await api.post("/notes", {
+      title,
+      description,
+      tags,
+      links
+    });
+
+    alert("Nota criada com sucesso.");
+    navigate(-1);
   }
 
   return (
@@ -42,17 +78,22 @@ export function New() {
         <Form>
           <header>
             <h1>Criar nota</h1>
-            <Link to="/">Voltar</Link>
+            <ButtonText title="Voltar" onClick={handleBack}/>
           </header>
 
-          <Input placeholder="Título" />
-          <Textarea placeholder="Observação" />
+          <Input placeholder="Título"
+          onChange={e => setTitle(e.target.value)}
+           />
+
+          <Textarea placeholder="Observação"
+           onChange={e => setDescription(e.target.value)} 
+           />
 
           <Section title="Links úteis">
-            {links.map((link,index) => (// buscar informações que está no estado link
+            {links.map((link,index) => (
               <NoteItem
                 key={String(index)}
-                value={link} // pegar valor
+                value={link} 
                 onClick={() => handleRemoveLink(link)}
               />
             ))}
@@ -70,9 +111,9 @@ export function New() {
             {
               tags.map((tag, index)=>(
                 <NoteItem
-                key={String(index)} // recebe a posição
+                key={String(index)} 
                  value={tag} 
-                  onClick={()=> handleDeleteTag(tag)} // passa tag para deletar
+                  onClick={()=> handleDeleteTag(tag)} 
                  />
               ))
             }
@@ -86,7 +127,10 @@ export function New() {
                />
             </div>
           </Section>
-          <Button title="Salvar" />
+
+
+          <Button title="Salvar" 
+          onClick={handleNewNote} />
         </Form>
       </main>
     </Container>

@@ -21,7 +21,7 @@ export function SignUp() {
     }
 
     api
-      .post("/users", { name, email, password }) // minha api
+      .post("/users", { name, email, password }) 
       .then(() => {
         // se deu certo
         alert("Usuário cadastrado com sucesso!");
@@ -29,7 +29,7 @@ export function SignUp() {
       })
       .catch((error) => {
         if (error.response) {
-          alert(error.response.data.message); // pegar msg que back está me enviando
+          alert(error.response.data.message); 
         } else {
           alert("Não foi possivel cadastrar");
         }

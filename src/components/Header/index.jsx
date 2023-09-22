@@ -5,9 +5,17 @@ import {Container, Profile, Logout} from './styles.js';
 import avatarPlaceHolder  from "../../img/imagem.svg";
 
 import { api } from "../../services/api.js";
+import { useNavigate } from 'react-router-dom';
 
 export function Header(){
    const { signOut, user } = useAuth();
+
+   const navigation = useNavigate();
+
+   function handleSignOut(){
+      navigation("/");
+      signOut();
+   }
 
    const AvatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder;
 
@@ -22,7 +30,7 @@ export function Header(){
             </div>
          </Profile>
 
-         <Logout onClick={signOut}>
+         <Logout onClick={handleSignOut}>
             <RiShutDownLine/>
          </Logout>
       </Container>

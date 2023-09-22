@@ -5,12 +5,13 @@ import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi";
 import { api } from "../../services/api.js";
 import avatarPlaceHolder  from "../../img/imagem.svg";
 
+import { useNavigate } from "react-router-dom";
+
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
-import {useAuth} from '../../hooks/auth'; // hookes de autenticação
+import {useAuth} from '../../hooks/auth'; 
 
-import { Link } from 'react-router-dom';
 
 export function Profile() {
   const {user, updateProfile} = useAuth();
@@ -20,27 +21,36 @@ export function Profile() {
   const [ passwordOld, setPasswordOld] = useState();
   const [ password, setPassword] = useState();
 
+  const navigate = useNavigate();
+
+
+  function handleBack(){
+    navigate(-1)
+   }
+
   const AvatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder;
 
   const [avatar, setAvatar] = useState(AvatarUrl); 
-  const [avatarFile, setAvatarFile] = useState(null); // carregar nova img
+  const [avatarFile, setAvatarFile] = useState(null);
 
 
   async function handleUpdate(){
-    const user = {
+    const updated = {
       name, 
       email,
       password: password,
       old_password: passwordOld,
-    }
+    };
 
-    await updateProfile({user, avatarFile});// passar informações
+    const userUpdated = Object.assign(user, updated);
+
+    await updateProfile({user: userUpdated, avatarFile});
   }
 
   //event de alteração da imagem
   function handleChangeAvatar(event){
     const file = event.target.files[0];
-    setAvatarFile(file); // carrega nova imagem
+    setAvatarFile(file); 
 
     const imgPreview = URL.createObjectURL(file);
     setAvatar(imgPreview)
@@ -50,9 +60,9 @@ export function Profile() {
   return (
     <Container>
       <header>
-        <Link to="/">
-          <FiArrowLeft />
-        </Link>
+        <button type="button" onClick={handleBack}>
+          <FiArrowLeft size={24} />
+        </button>
       </header>
 
       <Form>
