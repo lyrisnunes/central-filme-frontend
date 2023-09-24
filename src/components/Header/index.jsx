@@ -26,7 +26,7 @@ export function Header(){
 
             <div>
                <span>Bem-vindo</span>
-               <strong>Lyris Nunes</strong>
+               <strong>{user.name}</strong>
             </div>
          </Profile>
 
