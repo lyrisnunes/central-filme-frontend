@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['componentes estilizados'], // Substitua 'componentes estilizados' pelo nome correto do módulo
+      external: ['styled-components'],
     },
   },
 })
