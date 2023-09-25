@@ -12,7 +12,7 @@ Aplicação para acompanhar tudo que assistir. No front temos as páginas de aut
 - Biblioteca axios.
 
 
-Deploy: <a href="https://centralfilmes.netlify.app/"> - Clique aqui </a>
+Deploy: <a href="https://centralfilmes.netlify.app/" target="_blank" > - Clique aqui </a>
 
 ### Front
 - Vite;
