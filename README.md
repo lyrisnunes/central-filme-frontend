@@ -4,12 +4,34 @@
          <img src="src/img//banner.png" >
 </h1>
 
- A Central de Filmes é uma aplicação para organizar e desfrutar dos meus filmes favoritos. Com uma interface que inclui login, cadastro, uma página inicial intuitiva, um perfil personalizado e uma seção de descrição e avaliação de filmes.
+Aplicação para acompanhar tudo que assistir. No front temos as páginas de autenticação, que o o usuário vai ter acesso quando não estiver logado. E também temos as páginas da aplicação em si, que o usuário terá acesso se estiver logado. No back temos uma API REST completa utilizando Node.js e Expresss.
 
 - Interface intuitiva.
 - Boas praticas.
 - Integração com API.
 - Biblioteca axios.
+
+
+Deploy: <a href="https://centralfilmes.netlify.app/"> - Clique aqui </a>
+
+### Front
+- Vite;
+- ReactJS;
+- styled-components;
+- React-router-dom;
+- Axios;
+- LocalStorage;
+### Back 
+- Node.js
+- Express
+- SQLite
+- Knex.js
+- Autenticação;
+- JWT;
+- Middlewares;
+- Upload de imagens;
+- API Restful;
+- Cors;
 
 ## 🔧 Tecnologias
 
