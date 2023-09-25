@@ -77,7 +77,7 @@ export function New() {
       <main>
         <Form>
           <header>
-            <h1>Criar nota</h1>
+            <h1>Fale sobre seu filme 📽️</h1>
             <ButtonText title="Voltar" onClick={handleBack}/>
           </header>
 

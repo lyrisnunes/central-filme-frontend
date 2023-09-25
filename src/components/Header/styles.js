@@ -24,8 +24,8 @@ export const Profile = styled(Link)`
   align-items: center;
 
   > img {
-    width: 5.6rem;
-    height: 5.6rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     border: 2px solid ${({ theme }) => theme.COLORS.ORANGE};
   }
@@ -36,15 +36,18 @@ export const Profile = styled(Link)`
     margin-left: 1.6rem;
     line-height: 2rem;
 
-    span {
+    span{
       font-size: 1.2rem;
       color: ${({ theme }) => theme.COLORS.GRAY_100};
+
+    }
+
     }
     strong {
       font-size: 1.4rem;
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
-  }
+  
 `;
 
 export const Logout = styled.button`
@@ -52,7 +55,7 @@ export const Logout = styled.button`
    background: transparent;
 
    > svg{
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
+      color: ${({ theme }) => theme.COLORS.ORANGE};
       font-size: 2.6rem;
    }
 `;

@@ -14,6 +14,11 @@ Aplicação para acompanhar tudo que assistir. No front temos as páginas de aut
 
 Deploy: <a href="https://centralfilmes.netlify.app/"> - Clique aqui </a>
 
+Faça seu login ou se cadastre-se 
+
+e-mail: lyris@gmail.com
+Senha: 12
+
 ### Front
 - Vite;
 - ReactJS;

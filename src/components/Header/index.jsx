@@ -25,7 +25,7 @@ export function Header(){
             <img src={AvatarUrl} alt="Foto do usuário"/>
 
             <div>
-               <span>Bem-vindo</span>
+               <span>Bem-vindo - <span>Central filme</span></span>
                <strong>{user.name}</strong>
             </div>
          </Profile>
