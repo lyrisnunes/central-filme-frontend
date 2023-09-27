@@ -43,8 +43,10 @@ export const Form = styled.form`
       margin: 3rem 0;
       color: ${({theme})=> theme.COLORS.RED};
    }
-   
 
+   @media (max-width: 1000px){
+   padding: 0 1rem;
+   }
   
 `;
 
