@@ -85,11 +85,11 @@ export function New() {
           onChange={e => setTitle(e.target.value)}
            />
 
-          <Textarea placeholder="Observação"
+          <Textarea placeholder="sinopse"
            onChange={e => setDescription(e.target.value)} 
            />
 
-          <Section title="Links úteis">
+          <Section title="Onde assistir">
             {links.map((link,index) => (
               <NoteItem
                 key={String(index)}

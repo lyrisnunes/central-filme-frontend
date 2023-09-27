@@ -12,6 +12,10 @@ export default createGlobalStyle`
 
    :root{
       font-size: 62.5%;
+
+      @media (max-width: 500px) {
+      font-size: 56.5%;
+      }
    }
 
 

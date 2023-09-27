@@ -106,10 +106,11 @@ export function Home() {
            ))
             }
         </Section>
+        
       </Content>
       <NewNote to="/new">
         <FiPlus />
-        Criar Nota
+        Novo filme 🍿
       </NewNote>
     </Container>
   );
