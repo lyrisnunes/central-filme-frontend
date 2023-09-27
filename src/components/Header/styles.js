@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 export const Container = styled.header`
   grid-area: header; // cabeçalho fixo
@@ -17,6 +16,10 @@ export const Container = styled.header`
   justify-content: space-between;
 
   padding: 0 5rem;
+
+  @media (max-width: 900px) {
+  padding:  2rem;
+  }
 `;
 
 export const Profile = styled(Link)`
@@ -36,26 +39,23 @@ export const Profile = styled(Link)`
     margin-left: 1.6rem;
     line-height: 2rem;
 
-    span{
+    span {
       font-size: 1.2rem;
       color: ${({ theme }) => theme.COLORS.GRAY_100};
-
     }
-
-    }
-    strong {
-      font-size: 1.4rem;
-      color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-  
+  }
+  strong {
+    font-size: 1.4rem;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
 `;
 
 export const Logout = styled.button`
-   border: none;
-   background: transparent;
+  border: none;
+  background: transparent;
 
-   > svg{
-      color: ${({ theme }) => theme.COLORS.ORANGE};
-      font-size: 2.6rem;
-   }
+  > svg {
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+    font-size: 2.6rem;
+  }
 `;
