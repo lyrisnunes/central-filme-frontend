@@ -30,7 +30,7 @@ export const Profile = styled(Link)`
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    border: 2px solid ${({ theme }) => theme.COLORS.ORANGE};
+    border: 2px solid ${({ theme }) => theme.COLORS.RED};
   }
 
   > div {
@@ -55,7 +55,7 @@ export const Logout = styled.button`
   background: transparent;
 
   > svg {
-    color: ${({ theme }) => theme.COLORS.ORANGE};
+    color: ${({ theme }) => theme.COLORS.RED};
     font-size: 2.6rem;
   }
 `;

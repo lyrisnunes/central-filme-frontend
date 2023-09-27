@@ -23,8 +23,8 @@ export const Form = styled.form`
    > h1{
       font-size: 3rem;
       margin-bottom: .4rem;
-      margin-top: 6rem;
-      color: ${({theme})=> theme.COLORS.ORANGE};
+      margin-top: 3rem;
+      color: ${({theme})=> theme.COLORS.RED};
    }
 
    > p{
@@ -35,19 +35,17 @@ export const Form = styled.form`
 
    > h2{
       font-size: 2rem;
-      margin-top: 5rem;
-      margin-bottom: 2rem ;
+      margin-top: 4rem;
+      margin-bottom: 1rem ;
    }
 
    > a{
-      margin-top: 5.4rem;
-      color: ${({theme})=> theme.COLORS.ORANGE};
+      margin: 3rem 0;
+      color: ${({theme})=> theme.COLORS.RED};
    }
+   
 
-   @media (max-width: 1000px){
-   padding: 0 1rem;
-      
-   }
+  
 `;
 
 export const Background = styled.div`

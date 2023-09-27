@@ -1,7 +1,7 @@
 # Central Filmes
 
 <h1>
-         <img src="src/img//banner.png" >
+         <img src="src/img/banner.png" >
 </h1>
 
 Aplicação para acompanhar tudo que assistir. No front temos as páginas de autenticação, que o o usuário vai ter acesso quando não estiver logado. E também temos as páginas da aplicação em si, que o usuário terá acesso se estiver logado. No back temos uma API REST completa utilizando Node.js e Expresss.

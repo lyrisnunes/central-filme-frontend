@@ -10,7 +10,6 @@ export const Container = styled.div`
       text-align: center;
       justify-content: center;
    }
-  
 `;
 
 export const Form = styled.form`
@@ -23,7 +22,7 @@ export const Form = styled.form`
 
    > h1{
       font-size: 3rem;
-      color: ${({theme})=> theme.COLORS.ORANGE};
+      color: ${({theme})=> theme.COLORS.RED};
    }
 
    > p{
@@ -40,12 +39,11 @@ export const Form = styled.form`
 
    > a{
       margin-top: 5.4rem;
-      color: ${({theme})=> theme.COLORS.ORANGE};
+      color: ${({theme})=> theme.COLORS.RED};
    }
 
    @media (max-width: 1000px){
    padding: 0 1rem;
-      
    }
 `;
 
